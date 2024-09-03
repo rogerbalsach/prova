@@ -36,6 +36,11 @@ jobs:
         with:
           root_file: Bremsstrahlung.tex
 
+      - name: Copy
+        run: |
+          mkdir out
+          cp ./Bremsstrahlung.pdf ./out/Bremsstrahlung.pdf
+
       # Make the pdf available as an artifact on the GitHub Actions page.
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
