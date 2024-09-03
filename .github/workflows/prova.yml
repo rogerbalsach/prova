@@ -43,10 +43,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.6.4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          CLEAN: true
-          SINGLE_COMMIT: true
-          FOLDER: out
-          GIT_CONFIG_NAME: prova
-          GIT_CNOFIG_EMAIL: prova@gmail.com
+          folder: out
