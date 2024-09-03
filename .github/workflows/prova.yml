@@ -42,5 +42,3 @@ jobs:
       # Deploy the thesis to a GitHub page.
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.6.4
-        with:
-          folder: out
