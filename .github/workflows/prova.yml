@@ -41,24 +41,6 @@ jobs:
           mkdir out
           cp ./Bremsstrahlung.pdf ./out/Bremsstrahlung.pdf
 
-      - name: Commit PDF file
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b compiled-pdfs || git checkout compiled-pdfs
-          git add out/Bremsstrahlung.pdf
-          git commit -m "Auto-generated PDF from LaTeX"
-          git push origin compiled-pdfs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Make the pdf available as an artifact on the GitHub Actions page.
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: Bremsstrahlung
-          path: out/Bremsstrahlung.pdf
-
       # Deploy the thesis to a GitHub page.
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.6.4
