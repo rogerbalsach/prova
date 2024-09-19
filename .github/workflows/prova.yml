@@ -41,6 +41,11 @@ jobs:
           mkdir out
           cp ./Bremsstrahlung.pdf ./out/Bremsstrahlung.pdf
 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Bremsstrahlung
+          path: out/Bremsstrahlung.pdf
+
       # Deploy the thesis to a GitHub page.
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.6.4
