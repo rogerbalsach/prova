@@ -41,7 +41,9 @@ jobs:
           mkdir out
           cp ./Bremsstrahlung.pdf ./out/Bremsstrahlung.pdf
 
-      - uses: actions/upload-artifact@v2
+      # Make the pdf available as an artifact on the GitHub Actions page.
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
         with:
           name: Bremsstrahlung
           path: out/Bremsstrahlung.pdf
