@@ -1,1 +1,1 @@
-[Bremsstrahlung](https://rogerbalsach.github.io/prova/Bremsstrahlung.pdf){:target="_blank"}
+[Bremsstrahlung](https://rogerbalsach.github.io/prova/Bremsstrahlung.pdf)
